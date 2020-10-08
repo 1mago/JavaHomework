@@ -1,0 +1,50 @@
+package com.company;
+
+import java.util.Scanner;
+import java.awt.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        boolean f;
+        do  {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("nachalo int");
+            int a = scanner.nextInt();
+
+            System.out.println("konec int");
+            int b = scanner.nextInt();
+
+            System.out.println("pogreshnost'");
+            long n = scanner.nextInt();
+
+            integral(a, b, n);
+            f = repeat();
+        }
+        while (f);
+    }
+
+    public static void integral(int a, int b, long n) {
+        double h, sum;
+
+        h = (double) (b - a) / n;
+
+        sum = 0.5 * (Math.pow(a, 2) + Math.sin(2 * (a)) + (a) - 3 - (Math.pow(b, 2) + Math.sin(2 * (b)) + (b) - 3));
+
+        for (int i = 0; i <= n; i++) {
+            sum += Math.pow(a + i * h, 2) + Math.sin(2 * (a + i * h)) + (a + i * h) - 3;
+        }
+        System.out.println(sum * h);
+    }
+
+    public static boolean repeat() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Повторить?");
+        String rep = scan.nextLine();
+        if (rep.equals("n")) return false;
+        else if (rep.equals("y")) return true;
+        else return repeat();
+    }
+}
+
