@@ -1,0 +1,94 @@
+1. package com.company;
+
+class Main {
+
+    public static void main(String[] args) {
+            int array[] = {1,14,9,5,7,6};
+            int sum=0;
+            for(int i=0; i<array.length; i++) {
+                sum=sum+array[i];                                                еще вывести цифры буквами
+            }
+            System.out.println(sum);
+        }
+        }
+
+
+2. 
+
+
+3.  package com.company;
+
+class Main {
+    public static void main(String[] args) {
+
+        int[] array1 = new int[10];
+
+        array1[0]=25;
+        array1[1]=17;
+        array1[2]=350;
+        array1[3]=39;
+        array1[4]=47;
+        array1[5]=2;
+        array1[6]=92;
+        array1[7]=5;
+        array1[8]=1001;
+        array1[9]=88;
+        boolean flag = false;
+        int buf;
+        while(!flag) {
+            flag = true;
+            for (int i = 0; i < array1.length - 1; i++) {
+                if (array1[i] > array1[i + 1]) {
+                    flag = false;
+                    buf = array1[i];
+                    array1[i] = array1[i + 1];
+                    array1[i + 1] = buf;
+                }
+            }
+        }
+        System.out.println(array1[0]);
+        System.out.println(array1[1]);
+        System.out.println(array1[2]);
+        System.out.println(array1[3]);
+        System.out.println(array1[4]);
+        System.out.println(array1[5]);
+        System.out.println(array1[6]);
+        System.out.println(array1[7]);
+        System.out.println(array1[8]);
+        System.out.println(array1[9]);
+    }
+}
+    
+    
+4. 
+
+
+5. package com.company;
+
+import java.util.Random;
+
+class Main {
+    public static void main(String[] args) {
+
+        Random number = new Random();
+        int znachenie = number.nextInt(1000);
+        System.out.println("randomnaya cifra : " + " " + znachenie);
+
+        int naoborot = 0;
+        int a;
+
+        while (znachenie > 0) {
+            a = znachenie % 10;
+            naoborot = naoborot * 10;
+            naoborot = naoborot + a;
+            znachenie = znachenie / 10;
+        }
+        System.out.println("naoborot : " + "" + naoborot);
+        if(znachenie == naoborot) {
+            System.out.println("Palindrome"); }
+        else {System.out.println("not Palindrome");
+        }
+
+        }
+
+    }
