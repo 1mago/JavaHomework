@@ -13,7 +13,41 @@ class Main {
         }
 
 
-2. 
+2. package com.company;
+
+class Main {
+    public static void main(String[] args) {
+        int[] array1 = new int[10];
+
+        array1[0]=25;
+        array1[1]=17;
+        array1[2]=350;
+        array1[3]=39;
+        array1[4]=47;
+        array1[5]=2;
+        array1[6]=92;
+        array1[7]=5;
+        array1[8]=1001;                                                                         максимум не проверен, минимум не написан, проверить алгоритм в 
+        array1[9]=88;                                                                           финальных подсчетах
+        boolean flag = false;
+        int buf;
+        while(!flag) {
+            flag = true;
+            for (int i = 0; i < array1.length - 1; i++) {
+                if (array1[i] > array1[i + 1]) {
+                    flag = false;
+                    buf = array1[i];
+                    array1[i] = array1[i + 1];
+                    array1[i + 1] = buf;
+                }
+            }
+            
+        }
+        int length = array1.length;
+        System.out.println(max(array1[0]*array1[1]*array1[length-1],
+                array1[length-1]*array1[length-2]*array1[length-3]));
+    }
+}
 
 
 3.  package com.company;
