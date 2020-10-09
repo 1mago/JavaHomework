@@ -119,8 +119,12 @@ package com.company;
 
 import java.util.Random;
 
-class Main {
+class Palindrome {
     public static void main(String[] args) {
+
+    }
+
+    public void add() {
 
         Random number = new Random();
         int znachenie = 123321;
@@ -138,9 +142,19 @@ class Main {
         System.out.println("naoborot : " + "" + naoborot);
         if(znachenie == naoborot) {
             System.out.println("not Palindrome"); }
-        else {System.out.println(" Palindrome");
+        else {System.out.println("Palindrome");
         }
-
     }
+}
 
+
+package com.company;
+
+import java.util.Random;
+
+class Main {
+    public static void main(String[] args) {
+    Palindrome list = new Palindrome();
+    list.add();
+    }
 }
