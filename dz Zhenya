@@ -1,18 +1,68 @@
 1. Дан массив 6 цифр от 1 до 15, сначала надо вывести их буквами(1 = один), потом надо вывести сумму элементов массива.
 
 package com.company;
+import java.io.IOException;
+import java.util.Scanner;
 
-class Main {
+public class Main {
 
     public static void main(String[] args) {
-            int array[] = {1,14,9,5,7,6};
-            int sum=0;
-            for(int i=0; i<array.length; i++) {
-                sum=sum+array[i];                                                еще вывести цифры буквами
+        int array[] = {1,14,9,5,7,6};
+        int sum=0;
+        for(int i=0; i<array.length; i++) {
+            switch (array[i]) {
+                case 1:
+                    System.out.println("Раз");
+                    break;
+                case 2:
+                    System.out.println("Два");
+                    break;
+                case 3:
+                    System.out.println("Три");
+                    break;
+                case 4:
+                    System.out.println("Четыре");
+                    break;
+                case 5:
+                    System.out.println("Пять");
+                    break;
+                case 6:
+                    System.out.println("Шесть");
+                    break;
+                case 7:
+                    System.out.println("Семь");
+                    break;
+                case 8:
+                    System.out.println("Восемь");
+                    break;
+                case 9:
+                    System.out.println("Девять");
+                    break;
+                case 10:
+                    System.out.println("Десять");
+                    break;
+                case 11:
+                    System.out.println("Одиннадцать");
+                    break;
+                case 12:
+                    System.out.println("Двеннадцать");
+                    break;
+                case 13:
+                    System.out.println("Тринадцать");
+                    break;
+                case 14:
+                    System.out.println("Четырнадцать");
+                    break;
+                case 15:
+                    System.out.println("Пятнадцать");
+                    break;
             }
-            System.out.println(sum);
+            sum=sum+array[i];
         }
-        }
+        System.out.println(sum);
+    }
+}
+
 
 
 2. Дан массива 10 элементов(случайные цифры), надо вывести максимальное и минимальное произведение 2 чисел в этом массиве
@@ -64,7 +114,7 @@ class Main {
     }
 }
 
-3.  Дан массива 10 элементов(случайные цифры), отсортировать массив в порядке возрастания
+3.  Дан массив 10 элементов(случайные цифры), отсортировать массив в порядке возрастания
 
 package com.company;
 
