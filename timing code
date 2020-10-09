@@ -1,0 +1,6 @@
+public static void main(String[] args) throws InterruptedException {
+final long then = System.nanoTime();
+TimeUnit.SECONDS.sleep(1);
+код
+final long millis = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - then);
+System.out.println("Время = (ms): " + millis);} 
