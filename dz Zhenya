@@ -1,4 +1,6 @@
-1. package com.company;
+1. Дан массив 6 цифр от 1 до 15, сначала надо вывести их буквами(1 = один), потом надо вывести сумму элементов массива.
+
+package com.company;
 
 class Main {
 
@@ -13,7 +15,9 @@ class Main {
         }
 
 
-2. package com.company;
+2. Дан массива 10 элементов(случайные цифры), надо вывести максимальное и минимальное произведение 2 чисел в этом массиве
+
+package com.company;
 
 class Main {
     public static void main(String[] args) {
@@ -27,8 +31,8 @@ class Main {
         array1[5]=2;
         array1[6]=92;
         array1[7]=5;
-        array1[8]=1001;                                                                         максимум не проверен, минимум не написан, проверить алгоритм в 
-        array1[9]=88;                                                                           финальных подсчетах
+        array1[8]=1001;
+        array1[9]=88;
         boolean flag = false;
         int buf;
         while(!flag) {
@@ -41,16 +45,28 @@ class Main {
                     array1[i + 1] = buf;
                 }
             }
-            
+
         }
         int length = array1.length;
-        System.out.println(max(array1[0]*array1[1]*array1[length-1],
-                array1[length-1]*array1[length-2]*array1[length-3]));
+        System.out.println(array1[0]);
+        System.out.println(array1[1]);
+        System.out.println(array1[2]);
+        System.out.println(array1[3]);
+        System.out.println(array1[4]);
+        System.out.println(array1[5]);
+        System.out.println(array1[6]);
+        System.out.println(array1[7]);
+        System.out.println(array1[8]);
+        System.out.println(array1[9]);
+
+        System.out.println("min: " + "" + array1[0] * array1[1]);
+        System.out.println("max: " + "" + array1[8] * array1[9]);
     }
 }
 
+3.  Дан массива 10 элементов(случайные цифры), отсортировать массив в порядке возрастания
 
-3.  package com.company;
+package com.company;
 
 class Main {
     public static void main(String[] args) {
@@ -94,10 +110,12 @@ class Main {
 }
     
     
-4. 
+4. На вход подается x1 x2 x3 y1 y2 y3 надо посчитать определитель матрицы 3 на 3
 
 
-5. package com.company;
+5. Проверить является ли число палиндромом 123321
+
+package com.company;
 
 import java.util.Random;
 
@@ -105,7 +123,7 @@ class Main {
     public static void main(String[] args) {
 
         Random number = new Random();
-        int znachenie = number.nextInt(1000);
+        int znachenie = 123321;
         System.out.println("randomnaya cifra : " + " " + znachenie);
 
         int naoborot = 0;
@@ -119,10 +137,10 @@ class Main {
         }
         System.out.println("naoborot : " + "" + naoborot);
         if(znachenie == naoborot) {
-            System.out.println("Palindrome"); }
-        else {System.out.println("not Palindrome");
-        }
-
+            System.out.println("not Palindrome"); }
+        else {System.out.println(" Palindrome");
         }
 
     }
+
+}
