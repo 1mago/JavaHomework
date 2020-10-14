@@ -168,3 +168,20 @@ public class MyList {
             iter = iter.next;
         }
     }
+public void swap(int firstPos, int secondPos) {
+        Node itFirstPos = indexAt(firstPos);
+        Node itSecondPos = indexAt(secondPos);
+        Node itPreFirstPos = indexAt(firstPos - 1);
+        Node itPreSecondPos = indexAt(secondPos - 1);
+        if (firstPos == 1) {
+            this.begin = itSecondPos;
+            itPreSecondPos.next = itFirstPos;
+        } else {
+            itPreFirstPos.setNext(itSecondPos);
+            itPreSecondPos.setNext(itSecondPos);
+        }
+        Node iter = itFirstPos.next;
+        itFirstPos.next = itSecondPos.next;
+        itSecondPos.next = iter;
+    }
+}
